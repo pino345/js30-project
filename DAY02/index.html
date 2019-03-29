@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Date Select</title>
+    <link rel="stylesheet" href="css/style.css" type="text/css">
+</head>
+<body>
+    <div class="content">
+        <div class="checkin">
+            <span>체크인</span>
+            <input type="text" class="checkin-input" id="checkin-input" value="" readonly> 
+            <div class="calendar">
+                <div>
+                    <h3><button onclick="prevMonth()">👈</button><span class="current"></span><button onclick="nextMonth()">👉</button></h3>
+                </div>  
+                <table id="in">
+                    <thead>
+                        <tr>
+                            <th>SUN</th>
+                            <th>MON</th>
+                            <th>TUE</th>
+                            <th>WED</th>
+                            <th>THU</th>
+                            <th>FRI</th>
+                            <th>SAT</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <div class="checkout">
+            <span>체크아웃</span>
+            <input type="text" class="checkout-input" id="checkout-input" value="" readonly> 
+            <div class="calendar">
+                <div>
+                    <h3><button onclick="prevMonth()">👈</button><span class="current"></span><button onclick="nextMonth()">👉</button></h3>
+                </div>  
+                <table id="out">
+                    <thead>
+                        <tr>
+                            <th>SUN</th>
+                            <th>MON</th>
+                            <th>TUE</th>
+                            <th>WED</th>
+                            <th>THU</th>
+                            <th>FRI</th>
+                            <th>SAT</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
