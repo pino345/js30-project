@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css" type="text/css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <h2 class="my-5 w-100 text-center">Update CSS Variables with JS</h2>
+            <div class="col-md-6 text-option">
+                <div class="p-3 option-box">
+                    <div>
+                        <span>Dark theme</span>
+                        <label class="switch">
+                            <input type="checkbox" id="theme-switch" onclick="modeUpdate()">
+                            <span class="slider round"></span>
+                        </label>
+                    </div>
+                    <div>
+                        <label for="font-size">font-size</label>
+                        <input type="range" name="font-size" id="font-size" min=".8" max="1.6" step=".2" value="1" data-sizing="rem">
+                    </div>
+                    <div>
+                        <label for="letter-spacing">letter-spacing</label>
+                        <input type="range" name="letter-spacing" id="letter-spacing" min="-2" max="2" step=".2" value="0" data-sizing="px">
+                    </div>
+                </div>
+                <div class="change-box">
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla interdum eget tellus gravida maximus. Nunc rhoncus nulla at suscipit dignissim. Sed posuere lacinia euismod. Morbi sagittis quis nunc vitae hendrerit. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Integer pellentesque ut mauris sollicitudin bibendum. Aliquam iaculis augue sit amet luctus lacinia. Suspendisse gravida velit odio, non tincidunt ipsum semper in. Aenean mi leo, rutrum suscipit tincidunt nec, eleifend et nisl. Morbi mattis accumsan viverra. Suspendisse nulla libero, dignissim ut nunc at, laoreet lacinia enim. Phasellus euismod purus eget risus dignissim scelerisque. Sed vel ipsum sollicitudin, sagittis augue ac, vestibulum ante. Curabitur vitae elit a mauris rutrum euismod at at magna. Nunc bibendum mi eu odio hendrerit feugiat.
+                    </p>
+                </div>
+            </div>
+            <div class="col-md-6 mt-4 mt-md-0 img-option">
+                <div class="p-3 option-box">
+                    <div>
+                        <label for="blur">blur</label>
+                        <input type="range" name="blur" id="blur" min="0" max="2" step=".1" value="1" data-sizing="px">
+                    </div>
+                    <div>
+                        <label for="img-background-color">color</label>
+                        <input type="color" name="img-background-color" id="img-background-color" value="#3F733D">
+                    </div>
+                </div>
+                <div class="change-box">
+                    <img src="img/jd-rincs-1397037-unsplash.jpg" class="img-fluid" alt="sample image">
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="js/script.js"></script>
+</body>
+</html>

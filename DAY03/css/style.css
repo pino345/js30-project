@@ -1,0 +1,123 @@
+:root {
+    --background-color: white;
+    --color: black;
+    --font-size: 1rem;
+    --letter-spacing: 0px;
+    --img-background-color: #3F733D;
+    --blur: 1px;
+    --mouse-x: 0px;
+    --mouse-y: 0px;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+h2.text-center {
+    font-size: 3rem;
+    font-weight: bold;
+}
+
+.title-point {
+    text-shadow: rgba(255, 0, 255, 0.7) var(--mouse-x) (var(--mouse-y) * -1) 0px,
+                 rgba(0, 255, 255, 0.7) (var(--mouse-x) * -1) (var(--mouse-y) * -1) 0px,
+                 rgba(255, 255, 0, 0.7) (var(--mouse-y) * -1) var(--mouse-x) 0px, 
+                 rgba(0, 255, 0, 0.7) var(--mouse-y) var(--mouse-x) 0px
+}
+
+img {
+    padding-bottom: .5rem;
+    vertical-align: middle;
+}
+
+.option-box {
+    background: #333;
+    color: #fff;
+}
+
+/* The switch - the box around the slider */
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+/* The slider */
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+input:checked + .slider {
+    background-color: #202C30;
+}
+
+input:focus + .slider {
+    box-shadow: 0 0 1px #202C30;
+}
+
+input:checked + .slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+    background-color: #56575B
+}
+
+/* Rounded sliders */
+.slider.round {
+    border-radius: 34px;
+}
+
+.slider.round:before {
+    border-radius: 50%;
+}
+
+.change-box {
+    position: relative;
+    padding: 1rem;
+    border: 1px solid #333;
+}
+
+.text-option .change-box {
+    background-color: var(--background-color);
+    color: var(--color);
+    font-size: var(--font-size);
+    letter-spacing: var(--letter-spacing);
+}
+
+.img-option .change-box img{
+    padding: 1rem;
+    background-color: var(--img-background-color);
+    filter: blur(var(--blur));
+}
+
+
+
