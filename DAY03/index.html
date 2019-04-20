@@ -11,23 +11,31 @@
 <body>
     <div class="container">
         <div class="row">
-            <h2 class="my-5 w-100 text-center">Update CSS Variables with JS</h2>
+            <h2 class="my-5 w-100 text-center">Update CSS Variables with <span class="title-effect">JS</span></h2>
             <div class="col-md-6 text-option">
-                <div class="p-3 option-box">
-                    <div>
+                <div class="px-3 py-2 option-box">
+                    <div class="op-toggle">
                         <span>Dark theme</span>
                         <label class="switch">
                             <input type="checkbox" id="theme-switch" onclick="modeUpdate()">
                             <span class="slider round"></span>
+                            <div class="stars">
+                                <div></div>
+                                <div></div>
+                            </div>
                         </label>
                     </div>
-                    <div>
-                        <label for="font-size">font-size</label>
+                    <div class="op-range">
+                        <label for="font-size">font-size <span class="font-size-now"></span></label><br>
+                        <small>A</small>
                         <input type="range" name="font-size" id="font-size" min=".8" max="1.6" step=".2" value="1" data-sizing="rem">
+                        <span class="font-option-big">A</span>
                     </div>
-                    <div>
-                        <label for="letter-spacing">letter-spacing</label>
+                    <div class="op-range">
+                        <label for="letter-spacing">letter-spacing <span class="letter-spacing-now"></span></label><br>
+                        <small class="spacing-option-n">AA</small>
                         <input type="range" name="letter-spacing" id="letter-spacing" min="-2" max="2" step=".2" value="0" data-sizing="px">
+                        <small class="spacing-option-w">AA</small>
                     </div>
                 </div>
                 <div class="change-box">
@@ -38,11 +46,13 @@
             </div>
             <div class="col-md-6 mt-4 mt-md-0 img-option">
                 <div class="p-3 option-box">
-                    <div>
-                        <label for="blur">blur</label>
-                        <input type="range" name="blur" id="blur" min="0" max="2" step=".1" value="1" data-sizing="px">
+                    <div class="op-range">
+                        <label for="blur">blur <span class="blur-now"></span></label><br>
+                        <small>0px</small>
+                        <input type="range" name="blur" id="blur" min="0" max="2" step=".1" value="0" data-sizing="px">
+                        <small>2px</small>
                     </div>
-                    <div>
+                    <div class="op-color">
                         <label for="img-background-color">color</label>
                         <input type="color" name="img-background-color" id="img-background-color" value="#3F733D">
                     </div>

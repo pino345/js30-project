@@ -12,7 +12,7 @@ function modeUpdate() {
     }
 }
 
-//option
+// handle option
 const inputs = document.querySelectorAll('div > input')
 
 function handleUpdate() { 
@@ -23,3 +23,53 @@ function handleUpdate() {
 inputs.forEach(input => input.addEventListener('change', handleUpdate));
 inputs.forEach(input => input.addEventListener('mouseover', handleUpdate));
 
+// option style
+const fontSize =document.querySelector('#font-size');
+const letterSpacing = document.querySelector('#letter-spacing');
+const blur = document.querySelector('#blur');
+let fValue = document.querySelector('.font-size-now');
+let lValue = document.querySelector('.letter-spacing-now');
+let bValue = document.querySelector('.blur-now');
+
+function init(f, l ,b) {
+    fValue.innerHTML = f + "rem";
+    lValue.innerHTML = l + "px";
+    bValue.innerHTML = b + "px";
+}
+
+function showSizef(f) {
+    fValue.innerHTML = f + "rem"
+}
+
+function showSizel(l) {
+    lValue.innerHTML = l + "px"
+}
+
+function showSize(b) {
+    bValue.innerHTML = b + "px"
+}
+
+function updateRangel (l) {
+    let percent = b * 50
+    root.style.setProperty('--l-range', percent + "%")
+}
+
+function updateRange (b) {
+    let percent = b * 50
+    root.style.setProperty('--b-range', percent + "%")
+}
+
+init(fontSize.value, letterSpacing.value, blur.value);
+
+fontSize.addEventListener('input', () => {
+    showSizef(fontSize.value)
+})
+
+letterSpacing.addEventListener('input', () => {
+    showSizel(letterSpacing.value);
+})
+
+blur.addEventListener('input', () => {
+    showSize(blur.value);
+    updateRange(blur.value);
+})
